@@ -1,0 +1,12 @@
+mkdir demoqa_home
+cd demoqa_home
+
+mkdir pages
+mkdir tests
+mkdir components
+
+pip install pytest
+pip install selenium
+
+git init
+pip freeze > requirements.txt
