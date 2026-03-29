@@ -1,4 +1,7 @@
-Фикстура с драйвером:
+
+## `conftest.py`
+
+Тут драйвер создается без отдельного `chromedriver.exe`:
 
 ```python
 import pytest
