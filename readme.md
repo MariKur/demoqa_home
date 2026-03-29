@@ -2,7 +2,7 @@
 
 Учебный проект на Selenium + Pytest.
 
-## Запуск тестов
+## Установка
 
 ```bash
-pytest -v
+pip install -r requirements.txt
