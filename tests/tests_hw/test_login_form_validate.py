@@ -20,3 +20,22 @@ def test_login_form_validate(browser):
     submit_button.click()
 
     assert "was-validated" in form.find_element().get_attribute("class")
+from pages.base_page import BasePage
+from components.base_component import BaseComponent
+
+
+def test_fill_state_and_city(browser):
+    page = BasePage(browser, "https://demoqa.com/automation-practice-form")
+    page.visit()
+
+    state = BaseComponent(browser, "#state")
+    city = BaseComponent(browser, "#city")
+
+    state.click()
+    browser.find_element("css selector", "#react-select-3-option-0").click()
+
+    city.click()
+    browser.find_element("css selector", "#react-select-4-option-0").click()
+
+    assert "NCR" in state.get_text()
+    assert "Delhi" in city.get_text()
