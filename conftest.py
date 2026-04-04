@@ -1,15 +1,9 @@
-
-## `conftest.py`
-
-Тут драйвер создается без отдельного `chromedriver.exe`:
-
-```python
 import pytest
 from selenium import webdriver
 
 
 @pytest.fixture
-def driver():
+def browser():
     driver = webdriver.Chrome()
     driver.maximize_window()
     yield driver
